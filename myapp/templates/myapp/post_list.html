@@ -1,19 +1,9 @@
-<html>
-
-<head>
-    <title> daddydemir </title>
-</head>
-
-<body>
-    {% for i in entries %}
-    <div>
-        <p>Published : {{ i.published_date }}</p>
-        <h1><a href=""> {{i.title}} </a></h1>
-        <p> {{i.text | linebreaks }}</p>
+{% extends 'myapp/base.html' %} {% block content %} {% for post in entries %}
+<div class="post">
+    <div class="date">
+        <p>Yayın tarihi: {{ post.published_date }}</p>
     </div>
-    {% endfor %}
-
-
-</body>
-
-</html>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+</div>
+{% endfor %}{% endblock %}
