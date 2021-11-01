@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title> daddydemir </title>
+</head>
+
+<body>
+    {% for i in entries %}
+    <div>
+        <p>Published : {{ i.published_date }}</p>
+        <h1><a href=""> {{i.title}} </a></h1>
+        <p> {{i.text | linebreaks }}</p>
+    </div>
+    {% endfor %}
+
+
+</body>
+
+</html>
