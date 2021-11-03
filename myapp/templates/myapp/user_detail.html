@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %} {% block content %}
+<div class="post">
+    {% if entries.published_date %}
+    <div class="date">
+        {{ userx.name }}
+    </div>
+    {% endif %}
+    <h1>{{ userx.email }}</h1>
+    <p>{{ userx.d_date }}</p>
+</div>
+{% endblock %}

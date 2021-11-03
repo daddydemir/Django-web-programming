@@ -1,0 +1,6 @@
+{% extends 'myapp/base.html' %} {% block content %} {% for i in users %}
+<div class="card">
+    <h1>{{ i.name }}</h1>
+    <a href="mailto:{{ i.email }}">contact me </a>
+</div>
+{% endfor %}{% endblock %}
