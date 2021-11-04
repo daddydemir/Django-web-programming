@@ -44,9 +44,6 @@ def add_user(request):
         form = AddUserForm(request.POST)
         if(form.is_valid()):
             post = form.save(commit=False)
-            post.name = request.name
-            post.surname = request.surname
-            post.email = request.email
             post.save()
             return redirect('user_detail' , pk=post.pk)
     else:
